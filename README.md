@@ -18,13 +18,18 @@
 
 ## 📌 Overview
 
-Detect DNS LB, HTTP LB, CDN, WAF, TLS, GeoIP
+OBalancer is a web-infrastructure reconnaissance tool that detects load balancing, CDN, WAF and TLS characteristics of a target. It analyses multi-resolver DNS answers for round-robin and geographic balancing, inspects HTTP header/cookie/RTT variance for load balancers, and fingerprints 12+ CDN providers. TLS inspection and IP geolocation round out an infrastructure profile that can be exported for reporting.
 
 ---
 
 ## ✨ Features
 
-- OBalancer v1.1 — Detect DNS/HTTP load balancers, CDN, WAF, TLS, and GeoIP for web infrastructure recon.
+- DNS load-balancing detection via multi-resolver A/AAAA analysis
+- HTTP load-balancer detection from header, cookie, RTT and ETag variance
+- CDN fingerprinting across 12+ providers
+- WAF detection through probing and header heuristics
+- TLS cipher suite, certificate and HSTS inspection
+- IP geolocation and JSON/TXT export with a scorecard view
 
 ---
 
@@ -39,6 +44,7 @@ Detect DNS LB, HTTP LB, CDN, WAF, TLS, GeoIP
 
 ```bash
 ./OBalancer
+./OBalancer --help
 ```
 
 ---
